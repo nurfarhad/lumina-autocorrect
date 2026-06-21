@@ -18,3 +18,5 @@ View your app in AI Studio: https://ai.studio/apps/f2fc52d9-d9b4-4b92-9f13-c9670
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+Crucial API Notice: This application relies on strictly deterministic outputs. If you are plugging in your own Google AI Studio key, ensure the model is manually locked to Temperature: 0.1. If left at default temperature, the model will occasionally prepend conversational filler (e.g., 'Sure, here is your corrected text:'), which will instantly break the live string-matching UI.
